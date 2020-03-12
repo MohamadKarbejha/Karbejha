@@ -1,0 +1,56 @@
+#include <iostream>
+#include <math.h>
+
+using namespace std;
+
+int main()
+{
+	int f;
+	cout << "enter what do you need to count factorial(1) or fibonacci(2) : " << endl;
+	cin >> f;
+
+	if (f == 1)
+	{
+		unsigned int n;
+		unsigned long long factorial = 0;
+
+		cout << "Enter a positive integer: "<<endl;
+		cin >> n;
+
+		for (int i = 1; i <= n; ++i)
+		{
+			factorial += i;
+		}
+
+		cout << "sum for Factorial of " << n << " = " << factorial<<endl;
+
+	}
+	else if (f == 2)
+	{
+		int n, c, first = 0, second = 1, next;
+
+		cout << "Enter the number of terms of Fibonacci series you want" << endl;
+		cin >> n;
+
+		cout << "First " << n << " terms of Fibonacci series are :- " << endl;
+
+		for (c = 0; c < n; c++)
+		{
+			if (c <= 1)
+				next = c;
+			else
+			{
+				next = first + second;
+				first = second;
+				second = next;
+			}
+			cout << next << endl;
+		}		
+		
+	}
+
+	system("pause");
+	return 0;
+}
+
+
